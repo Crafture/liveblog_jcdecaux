@@ -6,14 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateMessages() {
         fetchMessages(backendUrl).then(messages => {
             messagesContainer.innerHTML = '';
-            console.log(messages)
-            displayMessages(messages, messagesContainer);
-            displayLastUpdate(messages, lastUpdateContainer);
+            console.log(messages);
+            const firstSevenMessages = messages.slice(0, 7);
+            displayMessages(firstSevenMessages, messagesContainer);
+            displayLastUpdate(firstSevenMessages, lastUpdateContainer);
             displayLastBorder();
         }).catch(error => {
             console.error('Error fetching messages:', error);
         });
     }
+
 
     updateMessages();
 
@@ -37,7 +39,7 @@ function displayLastUpdate(messages, container) {
     }, null);
 
     const latestTime = new Date(latestMessage.updated_at);
-    const formatLatestTime = latestTime.toLocaleDateString("nl-NL", { month: "short", day: "numeric", hour: "numeric", minute: "numeric", hourCycle: "h24"})
+    const formatLatestTime = latestTime.toLocaleDateString("nl-NL", { month: "short", day: "numeric", hour: "numeric", minute: "numeric", hourCycle: "h24" })
 
     container.innerHTML = `<p class="text-xs">Last Update: ${formatLatestTime}</p>`;
 }
