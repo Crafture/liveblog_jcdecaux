@@ -56,23 +56,23 @@ video,
     max-width: 5rem;
 }
 
+/* customisations for Rotation - to remove customisations just remove the ID prodFrame from the body */
+
 #prodFrame {
-    position:absolute;
+    position: absolute;
     transform: rotate(-90deg) scale(1);
     -o-transform: rotate(-90deg) scale(1);
     -moz-transform: rotate(-90deg) scale(1);
     -webkit-transform: rotate(-90deg) scale(1);
-
     transform-origin: top left 0;
     -o-transform-origin: top left 0;
     -moz-transform-origin: top left 0;
     -webkit-transform-origin: top left 0;
-
     left: 0;
     top: 1080px;
-
     width: 100vh;
     height: 100vw;
+    overflow: hidden;
 }
 
 #prodFrame.uhd {
@@ -97,4 +97,45 @@ video,
     top: 1680px;
     width: 100vh;
     height: 100vw;
+}
+
+#prodFrame .vimeo-wrapper iframe {
+    width: 100vh;
+    height: 100vw;
+    min-height: 100vw;
+    min-width: 340%;
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    transform: none;
+    right: 0;
+    bottom: 0;
+}
+
+#prodFrame .vimeo-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#prodFrame .w-screen {
+    width: 100vh;
+}
+#prodFrame .h-screen {
+    height: 100vw;
+}
+#prodFrame .fallback-poster {
+    width: 100vh;
+    height: 100vw;
+    left: 50%;
+    top: 50%;
+    object-fit: cover;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
