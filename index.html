@@ -12,13 +12,10 @@
 
     <body id="prodFrame">
         <div class="flex flex-col justify-center items-center w-screen h-screen">
-            <div class="vimeo-wrapper">
-                <iframe
-                    src="https://player.vimeo.com/video/817314053?h=e5dd850446&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1&autoplay=1&loop=1&byline=0&title=0"
-                    webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen title='background'>
-                </iframe>
-                <img class="fallback-poster" src="https://i.ibb.co/FXBCgMy/fallback.jpg" alt="fallback"></img>
-            </div>
+            <video autoplay loop muted>
+                <source src="/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <img src="images/logo.webp" class="w-2/4">
             <div class="bg-black-6 text-white flex flex-col w-2/3 items-center rounded p-5">
                 <div class="flex items-center m-auto justify-between w-full border-b border-white pb-3 mb-4">
