@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const messagesContainer = document.getElementById('messages');
     const lastUpdateContainer = document.getElementById('last-update');
-    const backendUrl = 'http://0.0.0.0:8000/messages/ricky-gervais/';
+    const backendUrl = 'http://backend.livecrowd.com/messages/jcdecaux';
 
     function updateMessages() {
         fetchMessages(backendUrl).then(messages => {
