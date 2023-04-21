@@ -1,3 +1,22 @@
+body{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+}
+
 .fallback-poster {
     width: 100vw;
     height: 100vh;
