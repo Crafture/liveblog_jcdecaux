@@ -178,3 +178,26 @@ video{
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
 }
+
+.table-container {
+    display: table;
+    width: 100vw;
+    height: 100vh;
+}
+
+.table-cell-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.centered-content {
+    display: inline-block;
+    text-align: left;
+}
+
+.centered-content > * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

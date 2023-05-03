@@ -47,7 +47,7 @@ function displayLastUpdate(messages, container) {
 function displayLastBorder() {
     const elements = document.querySelectorAll('.message');
     const lastElement = elements[elements.length - 1];
-    console.log(elements, lastElement)
+    // console.log(elements, lastElement)
 
     lastElement.classList.add('border-b', 'border-w');
 }
@@ -76,18 +76,18 @@ function displayMessages(messages, container) {
     });
 }
 
-function fixSizes() {
-    var prodFrame = document.getElementById('prodFrame');
-    var container = document.getElementById('container');
-    var body      = document.getElementById('body');
+// function fixSizes() {
+//     var prodFrame = document.getElementById('prodFrame');
+//     var container = document.getElementById('container');
+//     var body      = document.getElementById('body');
 
-    if (this.width=screen.width == 3840) { // UHD
-      prodFrame.classList.add("uhd");
-    } else if (this.width=screen.width == 2560) { // QHD
-      prodFrame.classList.add("qhd");
-    } else if (this.width=screen.width == 1920){ // HD
-      //blank
-    }
-  }
-  window.onload = fixSizes;
+//     if (this.width=screen.width == 3840) { // UHD
+//       prodFrame.classList.add("uhd");
+//     } else if (this.width=screen.width == 2560) { // QHD
+//       prodFrame.classList.add("qhd");
+//     } else if (this.width=screen.width == 1920){ // HD
+//       //blank
+//     }
+//   }
+//   window.onload = fixSizes;
 
